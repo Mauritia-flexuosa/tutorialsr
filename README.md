@@ -73,9 +73,11 @@ Pronto, já podemos fazer um mapa. Aqui está uma forma de fazer mapa
 simples, porém as categorias não estão nomeadas e olhando pro mapa não
 sabemos o que significam os números correspondentes às cores.
 
-```{r echo=TRUE, message=FALSE, warning=FALSE}
+```{r echo=TRUE, include=FALSE, message=FALSE, warning=FALSE}
 plot(mb8_cortado) 
 ```
+
+![Mapa simples.](mapasimples.png)
 
 #### Inserindo detalhes:
 
@@ -104,10 +106,12 @@ mb8c_df <- as.data.frame(x = mb8_cortado, xy = T)
 A partir daí, vamos fazer um mapa simples com poucas linhas de comando
 usando o pacote `ggplot2`.
 
-```{r echo=TRUE, message=FALSE, warning=FALSE}
+```{r echo=TRUE, include=FALSE, message=FALSE, warning=FALSE}
 mb8c_df %>% ggplot(aes(x = x, y = y, fill = Tipo_de_vegetação))+
 geom_tile()
 ```
+
+![Mapa simples com o ggplot.](ggplot1.png)
 
 ## 4. Customizar o mapa
 
@@ -130,8 +134,9 @@ geom_tile()+ scale_fill_manual(values = c("#1f8d49", "#7dc975",
 "Latitude", fill = "Cobertura", title = "Mapa Jardim de Maithrea -
 PNCV")+ geom_point(x = -47.68, y = -14.125, size = 2, shape = 5)
 
-mapa
 ```
+
+![Mapa customizado.](ggplot_customizado.png)
 
 ## 5. Baixar a figura
 
@@ -148,4 +153,4 @@ clicar em \`Export\` no RStudio.
 ![Botão para savar no RStudio.](salvar_export.png)
 
 Qualquer dúvida ou sugestão, entre em contato com
-<marciocure@gmail.com>.
+[marciocure\@gmail.com](mailto:marciocure@gmail.com){.email}.
