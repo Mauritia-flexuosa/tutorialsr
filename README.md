@@ -19,14 +19,14 @@ Vá em `Mapas e Dados` e clique em `Downloads`.
 ![Acesse o site do Mapbiomas](mapbiomas.png)
 
 Selecione o `Mapas das Coleções`. Nesta página há diversas informações
-e também oferece a opção de cinco maneiras diferentes de baixar os
-dados. Além disso ainda há links para outras coleções.
+e você também tem cinco opções de formas de baixar os
+dados. Além disso ainda há links para outras coleções do Mapbiomas.
 
 ![Selecione a coleção de dados](cole%C3%A7%C3%B5es.png)
 
-*Neste tutorial, usamos o script do Mapbiomas no Google Earth Engine
+Neste tutorial, usamos o _Toolkit_ do Mapbiomas no Google Earth Engine
 (GEE) para baixar os dados. Este método envia os dados direto para o
-Google Drive do usuário.* Para baixar através do GEE, use o link de
+Google Drive do usuário. Para baixar através do GEE, use o link de
 acesso ao [Toolkit do
 Mapbiomas](https://code.earthengine.google.com/32769583bb84490cec49b011f566a09b?accept_repo=users%2Fmapbiomas%2Fuser-toolkit).
 
@@ -34,9 +34,9 @@ Mapbiomas](https://code.earthengine.google.com/32769583bb84490cec49b011f566a09b?
 
 ### Início do script
 
-Primeiro, você precisa carrega pacotes necessários.
+Primeiro, você precisa carregar pacotes necessários.
 
-```{r echo=FALSE}
+```{r echo=TRUE, include=TRUE}
 library(tidyverse)
 library(terra)
 ```
@@ -70,7 +70,7 @@ mb8_cortado <- crop(mb8, e)
 ## 3. Fazer um mapa de cobertura da vegetação
 
 Pronto, já podemos fazer um mapa. Aqui está uma forma de fazer mapa
-simples, porém as categorias não estão nomeadas e olhando pro mapa não
+simples, porém as categorias não estão nomeadas e olhando para o mapa não
 sabemos o que significam os números correspondentes às cores.
 
 ```{r echo=TRUE, include=FALSE, message=FALSE, warning=FALSE}
@@ -115,7 +115,7 @@ geom_tile()
 
 ## 4. Customizar o mapa
 
-Podemos melhorar esse mapa e personalizá-lo. O pacote \`ggplot2\` faz
+Podemos melhorar este mapa e personalizá-lo. O pacote \`ggplot2\` faz
 belas figuras de uma forma simples e intuitiva. Nas próximas linhas de
 comando, vamos redefinir as cores dos tipos de vegetação de acordo com
 a legenda do mapbiomas e ajustar outros parâmetros para deixar o mapa
