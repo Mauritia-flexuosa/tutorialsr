@@ -4,7 +4,7 @@
 
 ## tutorialsr
 
-Link [aqui](https://mauritia-flexuosa.github.com/tutorialsr).
+Link <https://mauritia-flexuosa.github.com/tutorialsr)>.
 
 ### - Objetivo: Ter em mãos um mapa de cobertura da vegetação para uma área de interesse.
 
